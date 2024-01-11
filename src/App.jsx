@@ -11,13 +11,14 @@ import { BrowserRouter as Router,Route, Routes } from 'react-router-dom'
 
 function App() {
 
-  return 
+  return (
   <Router>
     <Routes>
       <Route path="/" element={<Imageslider slides={Sliderdata}/>}/>
       <Route path='/nextpage' element={<Nextpage/>}/>
     </Routes>
   </Router>
+)    
 }
 
 export default App 
