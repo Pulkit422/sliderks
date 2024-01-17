@@ -29,7 +29,6 @@ body {
   z-index: 5;
   cursor: pointer;
   user-select: none;
-  /* transform-style: preserve-3d; */
   transition: transform 0.1s linear;
 }
 
@@ -82,40 +81,83 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .right-arrow{
-    font-size: 2rem;
-    padding-left: 50%;
-    /* right: 1%;
-    left: 1%; */
-    transform: translateX(30%);
-    transition: transform 0.1s ease-in-out;
+  body {
+    margin: 0;
+    font-family: 'YourFontFamily', sans-serif;
   }
-  .left-arrow{
-    font-size: 2rem;
-    padding-right:50%;
-    transform: translateX(-30%);
-    transition: transform 0.1s ease-in-out;
-    /* right: 1%;
-    left: 1%; */
+  
+  .slider {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .slide{
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .right-arrow,
+  .left-arrow {
+    position: absolute;
+    font-size: 1.5rem;
+    color: goldenrod;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .right-arrow {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .left-arrow {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slide {
     opacity: 0;
-    transition-duration:1s ease-in-out;
-    /* transition: opacity 0.1s ease, transform 0.1s ease; */
-    transition: transform opacity 0.2s ease-in-out 0.2s ease-in-out;
   }
+  
   .slide.active {
     opacity: 1;
-    transition: transform opacity 0.2s ease-in-out 0.2s ease-in-out
-    /* transform: scale(1.05); */
+    transform: scale(1.03);
   }
-
+  
   .slider-title {
-    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: goldenrod;
   }
-
+  
   .image-button {
-    top: 65%;
-    padding: 4px 4px;
+    position: absolute;
+    top: 60%;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px 2px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
+  
+  .image-button:hover {
+    background-color: coral;
+  }
+   
 }
