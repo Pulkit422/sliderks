@@ -23,6 +23,7 @@ body {
 .left-arrow {
   position: absolute;
   top: 50%;
+  bottom: 50%;
   font-size: 3rem;
   color: goldenrod;
   z-index: 10;
@@ -48,13 +49,14 @@ body {
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
-  transform: scale(1.08);
+  transform: scale(1.0);
 }
 
-.title {
+.slider-title {
   position: absolute;
-  top: 60%;
+  top: 47.5%;
   left: 50%;
+  /* right: 50%; */
   transform: translate(-50%, -50%);
   font-size: 3.5rem; 
   color: goldenrod;
@@ -62,7 +64,7 @@ body {
 
 .image-button {
   position: absolute;
-  top: 70%; 
+  top: 60%; 
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -75,4 +77,30 @@ body {
 
 .image-button:hover {
   background-color: coral;
+}
+
+@media only screen and (max-width: 768px) {
+  .right-arrow{
+    font-size: 2rem;
+    padding-left: 50%;
+    /* right: 1%;
+    left: 1%; */
+    transform: translateX(30%);
+  }
+  .left-arrow{
+    font-size: 2rem;
+    padding-right:50%;
+    transform: translateX(-30%);
+    /* right: 1%;
+    left: 1%; */
+  }
+
+  .slider-title {
+    font-size: 2rem;
+  }
+
+  .image-button {
+    top: 65%;
+    padding: 4px 4px;
+  }
 }
