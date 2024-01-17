@@ -33,7 +33,7 @@ if(!Array.isArray(slides)||slides.length<=0){
         {/* <div className='yes'> */}
             <img src={slide.image} alt='travel image' className='image' />
                 {/* <button class="btn">Button</button> */}
-            <h2 className="title">{slide.title}</h2>
+            <h2 className="slider-title">{slide.title}</h2>
             <button className='image-button' onClick={goToNextPage} >Button</button>  
             {/* onClick={goToNextPage} */}
         {/* </div> */}
