@@ -26,11 +26,11 @@ body {
   bottom: 50%;
   font-size: 3rem;
   color: goldenrod;
-  z-index: 10;
+  z-index: 5;
   cursor: pointer;
   user-select: none;
-  transform-style: preserve-3d;
-  transition: transform 0.5s ease-in-out;
+  /* transform-style: preserve-3d; */
+  transition: transform 0.1s linear;
 }
 
 .right-arrow {
@@ -43,12 +43,14 @@ body {
 
 .slide {
   opacity: 0;
-  transition-duration: 1s ease;
+  transition-duration:1s linear;
+  /* transition: opacity 0.1s ease, transform 0.1s ease; */
+  transition: transform opacity 0.2s ease-in-out 0.2s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
-  transition-duration: 1s;
+  transition: transform opacity 0.2s ease-in-out 0.2s ease-in-out;
   transform: scale(1.0);
 }
 
@@ -86,13 +88,26 @@ body {
     /* right: 1%;
     left: 1%; */
     transform: translateX(30%);
+    transition: transform 0.1s ease-in-out;
   }
   .left-arrow{
     font-size: 2rem;
     padding-right:50%;
     transform: translateX(-30%);
+    transition: transform 0.1s ease-in-out;
     /* right: 1%;
     left: 1%; */
+  }
+  .slide{
+    opacity: 0;
+    transition-duration:1s ease-in-out;
+    /* transition: opacity 0.1s ease, transform 0.1s ease; */
+    transition: transform opacity 0.2s ease-in-out 0.2s ease-in-out;
+  }
+  .slide.active {
+    opacity: 1;
+    transition: transform opacity 0.2s ease-in-out 0.2s ease-in-out
+    /* transform: scale(1.05); */
   }
 
   .slider-title {
